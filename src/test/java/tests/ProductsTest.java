@@ -33,7 +33,25 @@ public class ProductsTest extends BaseTest {
         productsPage.addProductToCart();
         productsPage.deleteProductFromShoppingCart();
         boolean count = productsPage.cartBadgeDisabled();
-        Assert.assertEquals(count, false, "not deleted");
+        Assert.assertFalse(count, "not deleted");
+    }
+
+    @Test
+    public void getToShoppingCart() {
+        LoginPage loginPage = new LoginPage(driver);
+        ProductsPage productsPage = loginPage.login("standard_user", "secret_sauce");
+        productsPage.getToShoppingCart();
+        String cartText = productsPage.cartPage();
+        Assert.assertEquals(cartText, "Your Cart", "not shopping cart");
+    }
+
+    @Test
+    public void openBurgerMenu() {
+        LoginPage loginPage = new LoginPage(driver);
+        ProductsPage productsPage = loginPage.login("standard_user", "secret_sauce");
+        productsPage.openBurgerMenu();
+        String allItems = productsPage.burgerMenuVision();
+        Assert.assertEquals(allItems, "All Items", "Burger menu not vision");
     }
 
 }
