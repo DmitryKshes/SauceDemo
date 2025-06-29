@@ -15,7 +15,7 @@ public class ProductsPage {
     private final By burgerMenu = By.id("react-burger-menu-btn");
     private final By removeButton = By.id("remove-sauce-labs-backpack");
     private final By countOfProducts = By.xpath("//*[@id=\"shopping_cart_container\"]/a/span");
-    private final By shoppingCart = By.id("shopping_cart_container");
+    private final By shoppingCart = By.xpath("//*[@id=\"shopping_cart_container\"]/a");
     private final By cartPageTitle = By.xpath("//*[@id=\"header_container\"]/div[2]/span");
     private final By allItemsLink = By.id("inventory_sidebar_link");
 

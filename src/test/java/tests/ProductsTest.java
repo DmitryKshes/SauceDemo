@@ -37,7 +37,7 @@ public class ProductsTest extends BaseTest {
     }
 
     @Test
-    public void getToShoppingCart() {
+    public void getToShoppingCartTest() {
         LoginPage loginPage = new LoginPage(driver);
         ProductsPage productsPage = loginPage.login("standard_user", "secret_sauce");
         productsPage.getToShoppingCart();
@@ -46,7 +46,7 @@ public class ProductsTest extends BaseTest {
     }
 
     @Test
-    public void openBurgerMenu() {
+    public void openBurgerMenuTest() {
         LoginPage loginPage = new LoginPage(driver);
         ProductsPage productsPage = loginPage.login("standard_user", "secret_sauce");
         productsPage.openBurgerMenu();
